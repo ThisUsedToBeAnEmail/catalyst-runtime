@@ -16,8 +16,7 @@ BEGIN {
 # make sure testapp works
 use_ok('TestAppUnicode') or BAIL_OUT($@);
 
-our $TEST_FILE = IO::Scalar->new(\"this is a test");
-sub IO::Scalar::FILENO { -1 }; # needed?
+open our $TEST_FILE, '<', \"this is a test";
 
 # a live test against TestAppUnicode, the test application
 use Test::WWW::Mechanize::Catalyst 'TestAppUnicode';

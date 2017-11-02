@@ -91,7 +91,6 @@ test_requires 'Test::Fatal';
 test_requires 'Test::More' => '0.88';
 test_requires 'Data::Dump';
 test_requires 'HTTP::Request::Common';
-test_requires 'IO::Scalar';
 test_requires 'HTTP::Status';
 test_requires 'JSON::MaybeXS';
 
